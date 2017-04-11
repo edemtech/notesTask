@@ -1,0 +1,17 @@
+/*User styles*/
+.panel-x{
+  padding:10px;
+}
+.panel-heading-x{
+  padding: 0 0 0 10px;
+}
+.textarea-x{
+  border-radius:0;
+  resize: none;
+}
+.panel-body-x{
+  padding: 0;
+}
+.list-group-item{
+  word-wrap: break-word;
+}

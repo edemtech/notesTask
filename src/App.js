@@ -53,24 +53,20 @@ class App extends React.Component {
     const listOfItems = items.map( (item) =>
       item.isRemoved ? (
         <div className="panel panel-danger" key={item.id}>
-            <div className="panel-heading panel-heading-x">
-              Item #{item.id}
-            </div>
-            <div className="panel-body panel-body-x">
-              <textarea disabled className="form-control textarea-x"
-                        rows="3"
-                        value=''
-                        onChange={this.handleChange.bind(this, item)}>
-              </textarea>
-            </div>
+          <div className="panel-heading panel-heading-x">Item #{item.id}</div>
+          <div className="panel-body panel-body-x">
+            <textarea disabled className="form-control textarea-x"
+                      rows="3"
+                      value=''
+                      onChange={this.handleChange.bind(this, item)}>
+            </textarea>
+          </div>
           <button className="btn btn-xs btn-primary" onClick={this.restoreTab.bind(this, item)}>Restore</button>
           <button className="btn btn-xs btn-danger" onClick={this.deleteTab.bind(this, item)}>Remove completely</button>
         </div>
       ) : (
         <div className="panel panel-danger" key={item.id}>
-            <div className="panel-heading panel-heading-x">
-              Item #{item.id}
-            </div>
+            <div className="panel-heading panel-heading-x">Item #{item.id}</div>
             <div className="panel-body panel-body-x">
               <textarea className="form-control textarea-x" rows="3" value={item.text} onChange={this.handleChange.bind(this, item)}></textarea>
             </div>
